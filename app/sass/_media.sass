@@ -1,0 +1,170 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	footer
+		.footer-nav
+			width: 100%
+
+// ≥992px
++media-breakpoint-down(md)
+	.header-logo
+		img
+			max-width: 90%
+	.header-nav
+		display: none
+	.header-search
+		display: none
+
+	.owl-nav
+		font-size: 55px
+		.owl-prev
+			left: 0px
+		.owl-next
+			right: 0px
+
+// ≥768px
++media-breakpoint-down(sm)
+	.main-slider-content
+		&__title
+			font-size: 44px
+		&__subtitle
+			font-size: 19px
+		&__descr
+			img
+				max-height: 100px
+				max-width: 100px
+			p
+				font-size: 16px
+
+	.section-news
+		.button
+			&:first-child
+				margin: 0 auto
+				margin-bottom: 15px
+				border-right: 1px solid #f0f0f0
+			&:last-child
+				margin: 0 auto
+			
+
+	.news
+		display: block
+		&__img
+			margin-bottom: 30px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.header-logo
+		img
+			max-width: 85%
+	.humburger
+		right: 5px
+	.mobile-logo
+		img
+			max-width: 90%
+
+	.owl-nav
+		display: none
+
+	.main-slider-content
+		&__title
+			font-size: 34px
+		&__subtitle
+			font-size: 16px
+		&__descr
+			img
+				max-height: 90px
+				max-width: 90px
+				margin-right: 15px
+			p
+				font-size: 13px
+		.button
+			font-size: 14px
+			padding: 10px 0
+			width: 180px
+		
+	.section-advantages
+		.h3
+			font-size: 26px
+			p
+				font-size: 13px
+
+	.advantage
+		&__img
+			img
+				width: 50px
+		&__text
+			.h4
+				font-size: 15px
+			p
+				font-size: 13px
+
+	.section-news
+		.h3
+			font-size: 30px
+
+	.news
+		&__category
+			font-size: 12px
+		&__data
+			font-size: 13px
+		&__title
+			font-size: 13px
+		&__descr
+			font-size: 14px
+
+	.section-start-today
+		.button
+			max-width: 310px
+
+	.start-today
+		&__number
+			font-size: 30px
+		&__descr
+			font-size: 14px
+
+	.form
+		padding: 30px 14px
+		input
+			font-size: 15px
+		.button
+			width: 120px
+
+	footer
+		.footer-nav
+			ul
+				flex-wrap: wrap
+				text-align: center
+				justify-content: center
+				li
+					width: 26%
+
+	.subscribe
+		input
+			width: 230px
+
+	.social
+		a
+			margin: 0 15px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+	.humburger
+		display: none
+	.header-mobile
+		display: none
+
+// ≤1200px
++media-breakpoint-up(xl)

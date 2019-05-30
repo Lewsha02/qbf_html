@@ -1,0 +1,709 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:required:valid
+			border-color: green
+
+body.noscroll
+	overflow-y: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+// Base Sass
+
+.h1
+	font-size: 36px
+	font-weight: normal
+
+.h2
+	font-size: 50px
+	font-weight: 300
+	line-height: 1.1
+
+.h3
+	font-size: 36px
+	font-weight: normal
+
+.h4
+	font-size: 16px
+	font-weight: bold
+	text-transform: uppercase
+
+.button
+	padding: 15px 0
+	color: #fff
+	font-size: 16px
+	font-weight: normal
+	text-decoration: none
+	transition: all .5s ease-out
+	background-color: $accent
+	&:hover
+		background: #e6e6e6
+		cursor: pointer
+		color: $accent
+		text-decoration: none
+
+section
+	padding: 80px 0
+
+// Main Sass
+
+.header
+	background-color: #f5f6f6
+	padding: 25px 0
+	color: $text
+	position: relative
+	z-index: 2
+	&-nav
+		position: relative
+		ul
+			display: flex
+			list-style-type: none
+			justify-content: space-between
+			margin: 0
+			padding: 0
+			li
+				a
+					color: $text
+					text-decoration: none
+					text-transform: uppercase
+					font-size: 12px
+					transition: all .15s ease
+					font-weight: bold
+					&:hover
+						color: $accent
+				&.active-item
+					a
+						color: $accent
+		&::before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 40px
+			background: #cacbcb
+			top: -7px
+			left: -6%
+	&-search
+		text-align: right
+		position: relative
+		input
+			display: inline-block
+			position: absolute
+			right: 50px
+			opacity: 0
+			height: 25px
+			width: 170px
+			overflow: hidden
+			border: 1px solid grey
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .5s ease
+			border-radius: 5px
+			background: #fefefe
+			z-index: -1
+			&.input-active
+				right: 80px
+				opacity: 1
+				z-index: 1
+		i
+			display: inline-block
+			cursor: pointer
+			font-size: 18px
+			z-index: 999
+		.login
+			margin-left: 15px
+			display: inline-block
+			color: #000000
+			border: 1px solid #000
+			height: 31px
+			width: 31px
+			text-align: center
+			line-height: 31px
+
+.header_opacity
+	background: rgba(#f5f6f6, .7)
+
+.header_dark
+	background: #404040
+	ul
+		li
+			a
+				color: #fff
+	i
+		color: #fff
+	.header-search
+		.login
+			border: 1px solid #fff
+
+.humburger
+	width: 30px
+	position: absolute
+	top: 50%
+	right: 30px
+	cursor: pointer
+	z-index: 4
+
+.humburger span:after,
+.humburger span:before
+	content: ""
+	position: absolute
+	left: 0
+	top: -11px
+
+.humburger span:after
+	top: 11px
+
+.humburger span 
+	position: relative
+	display: block
+
+.humburger span,
+.humburger span:after,
+.humburger span:before
+	width: 100%
+	height: 4px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+
+.humburger.on span 
+	background-color: transparent
+
+.humburger.on span:before 
+	transform: rotate(45deg) translate(8px, 8px)
+	background-color: $accent
+
+.humburger.on span:after 
+	transform: rotate(-45deg) translate(8px, -7px)
+	background-color: $accent
+
+.humburger.on
+	opacity: 1
+	visibility: visible
+
+.header-mobile
+	position: fixed
+	visibility: hidden
+	overflow: scroll
+	height: 100%
+	width: 100%
+	z-index: 3
+	background-color: #f7f8f8
+	top: 0
+	left: 0
+	padding: 30px
+	opacity: 0
+	transition: all .5s ease
+	&_active
+		opacity: 1
+		visibility: visible
+
+.mobile-logo
+	img
+		max-width: 100%
+
+.mobile-search
+	margin-top: 45px
+	display: flex
+	i
+		color: #676868
+		font-size: 18px
+		margin-right: 35px
+	&__input
+		border: none
+		width: 100%
+		border-bottom: 1px solid #d3d3d3
+		background-color: transparent
+
+.mobile-nav
+	margin-top: 30px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			border-bottom: 1px solid #d3d3d3
+			a
+				padding: 14px
+				display: block
+				text-transform: uppercase
+				font-size: 14px
+				color: $text
+				&:hover
+					text-decoration: none
+					color: $accent
+
+.mobile-phone
+	color: $text
+	font-size: 20px
+	text-decoration: none
+	text-align: center
+	display: block
+	margin-top: 40px
+	&:hover
+		color: $text
+		text-decoration: none
+
+.mobile-login
+	font-size: 16px
+	color: $text
+	text-decoration: none
+	text-align: center
+	display: block
+	margin-top: 5px
+	text-transform: uppercase
+	&:hover
+		color: $text
+		text-decoration: none
+
+// Main section
+
+.main-slider
+	padding: 65px 0
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	color: #fff
+	position: relative
+
+.main-slider-content
+	&__title
+		margin-bottom: 18px
+	&__subtitle
+		font-size: 21px
+		color: $accent
+		border-bottom: 1px solid #9298a2
+		padding-bottom: 10px
+	&__descr
+		display: flex
+		align-items: center
+		padding: 45px 0
+		img
+			margin-right: 60px
+			max-height: 130px
+			max-width: 130px
+		p
+			font-size: 19px
+	.button
+		width: 200px
+		display: inline-block
+		text-align: center
+
+.owl-nav
+	font-size: 85px
+	color: #4B454E
+	line-height: 18px
+	.owl-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 20px
+	.owl-next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 20px
+
+.owl-dots
+	position: absolute
+	bottom: 20px
+	left: 50%
+	transform: translateX(-50%)
+	.owl-dot
+		width: 7px
+		height: 7px
+		border-radius: 50%
+		border: 1px solid $accent
+		display: inline-block
+		margin: 0 4px
+		transition: all .5s ease
+		&.active
+			background-color: $accent
+
+// Section advantages
+
+.section-advantages
+	background-color: #f6f6f6
+	padding-bottom: 0
+	.h3
+		text-align: center
+		font-weight: 300
+		span
+			color: $accent
+	p
+		text-align: center
+		font-size: 15px
+		font-weight: bold
+		margin-bottom: 80px
+
+.advantage
+	display: flex
+	align-items: center
+	margin-bottom: 80px
+	&__img
+		margin-right: 30px
+	&__text
+		.h4
+			margin-bottom: 10px
+		p
+			text-align: left
+			margin: 0
+			padding: 0
+
+// Analitics \ News
+
+.section-news
+	color: $text
+	text-align: center
+	.h3
+		text-align: center
+		width: 100%
+		font-weight: 300
+		margin-bottom: 80px
+	.button
+		background-color: transparent
+		display: inline-block
+		margin: 0 auto
+		font-weight: normal
+		font-size: 14px
+		border: 1px solid #f0f0f0
+		color: $text
+		width: 310px
+		&:first-child
+			margin-right: 0
+			border-right: none
+		&:last-child
+			margin-left: 0
+		&:hover
+			color: $accent
+		&.active
+			background-color: #f7f7f7
+	.row
+		.news__all
+			border-right: 1px solid #f0f0f0
+			margin: 0 auto
+
+.news
+	margin: 80px 0
+	text-align: left
+	display: flex
+	&__img
+		display: inline-block
+		margin-right: 20px
+	&__category
+		vertical-align: top
+		display: block
+		font-size: 14px
+		color: $accent
+		text-transform: uppercase
+		text-decoration: none
+		font-weight: bold
+		transition: all .15s ease
+		margin-bottom: 20px
+		&:hover
+			color: #bbbaba
+			text-decoration: none
+	&__data
+		vertical-align: top
+		display: inline-block
+		font-size: 14px
+	span
+		color: #f6f6f6
+	&__title
+		font-size: 14px
+		color: $text
+		text-transform: uppercase
+		text-decoration: none
+		font-weight: bold
+		transition: all .15s ease
+		&:hover
+			cursor: pointer
+			text-decoration: none
+			color: $accent
+	&__descr
+		display: block
+		font-size: 16px
+		margin-top: 20px
+		color: $text
+		text-decoration: none
+		transition: all .15s ease
+		&:hover
+			text-decoration: none
+			color: #bbbaba
+
+// Section Start Today
+
+.section-start-today
+	background-color: #333333
+	padding-top: 60px
+	padding-bottom: 40px
+	color: #ffffff
+	.h3
+		margin: 0 auto
+	.button
+		margin: 0 auto
+		width: 400px
+		text-align: center
+		margin-top: 55px
+
+.start-today
+	margin-top: 50px
+	&__img
+		display: inline-block
+		margin-right: 20px
+		vertical-align: top
+	&__number
+		font-size: 35px
+		color: $accent
+	&__descr
+		margin-top: 15px
+		font-weight: 300
+
+.form
+	display: none
+	padding: 50px
+	background-color: #fff
+	text-align: center
+	&__title
+		font-size: 20px
+		margin-bottom: 10px
+		font-weight: bold
+		text-align: center
+	&__descr
+		font-size: 14px
+		text-align: center
+	input
+		display: block
+		width: 100%
+		padding: 13px 21px
+		color: #949494
+		background: #f7f7f7
+		border: none
+		margin-bottom: 10px
+	.button
+		margin-top: 10px
+		text-align: center
+		width: 170px
+		display: inline-block
+		padding: 11px 0
+		font-size: 14px
+		border-radius: 1px
+		outline: none
+		border: none
+	.button-send
+		margin-right: 5px
+	.button-close
+		background-color: #a3a3a3
+		&:hover
+			background-color: #e6e6e6
+	&__info
+		font-size: 12px
+		color: #666666
+		margin-top: 30px
+		line-height: 1
+		text-align-last: left
+		input
+			display: inline
+			width: 13px
+		a
+			color: $text
+			text-decoration: underline
+
+// Footer
+
+footer
+	background-color: #fbfbfb
+	padding: 
+		top: 60px
+		bottom: 40px
+
+.footer-nav
+	margin: 0 auto
+	width: 60%
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-around
+		li
+			a
+				font-size: 12px
+				color: $text
+				text-decoration: none
+				text-transform: uppercase
+				transition: all .15s ease
+				&:hover
+					color: $accent
+
+.subscribe
+	margin-top: 60px
+	text-align: center
+	width: 100%
+	p
+		color: #808080
+		font-size: 12px
+		margin: 0
+		padding: 0
+	input
+		width: 300px
+		color: #808080
+		border: 1px solid #ebebeb
+		margin-top: 8px
+		padding: 10px 0
+		font-size: 12px
+		padding-left: 10px
+	.button
+		border: none
+		height: 41px
+		width: 41px
+		display: inline-block
+		vertical-align: bottom
+		i
+			font-size: 21px
+			line-height: 41px
+			vertical-align: top
+			margin-top: -13px
+			display: inline-block
+		&:hover
+			cursor: pointer
+			color: #ffffff
+
+.social
+	margin: 0 auto
+	margin-top: 60px
+	a
+		width: 32px
+		height: 32px
+		background-color: #000
+		border-radius: 50%
+		font-size: 18px
+		line-height: 32px
+		color: #ffffff
+		display: inline-block
+		text-align: center
+		margin:  0 25px
+		transition: all .25s ease
+		&:hover
+			background-color: #656565
+		i
+			&::before
+				margin: 0
+
+.offices
+	margin-top: 20px
+	border-top: 1px solid #f1f1f1
+
+.office
+	margin-top: 30px
+	padding: 20px
+	&__title
+		font-size: 12px
+		text-transform: uppercase
+	&__phone
+		font-size: 16px
+		color: $text
+		text-decoration: 
+		margin-top: 25px
+		transition: all .25s ease
+		display: inline-block
+		&:hover
+			color: $accent
+			text-decoration: none
+	&__address
+		font-size: 12px
+		color: $text
+		margin-top: 16px
+	&__email
+		margin-top: 5px
+		display: inline-block
+		color: $text
+		text-decoration: none
+		font-size: 12px
+		transition: all .25s ease
+		&:hover
+			color: $accent
+			text-decoration: none
+
+.disclamer
+	margin-top: 30px
+	padding-top: 30px
+	border-top: 1px solid #f1f1f1
+	p
+		font-size: 9px
+		color: #888888
+		margin-bottom: 5px
+
+// Top button
+
+
+.top
+	position: fixed
+	bottom: 50px
+	right: -100px
+	border: 1px solid #c9c9c9
+	z-index: 12
+	color: #666
+	font-size: 26px
+	width: 40px
+	height: 40px
+	text-align: center
+	line-height: 40px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .5
+	i
+		line-height: 0
+	&:hover
+		color: $accent
+		border-color: $accent
+		opacity: 1
+	&.active
+		right: 25px
+
+// Form
+
+.mfp-forms
+	.form
+		max-width: 500px
+		margin: 0 auto
+		position: relative
+		display: block
+	.mfp-close
+		color: $accent
+		position: absolute
+		right: 0
+		top: 0
+		font-size: 40px
+
+@import "media" // Always at the end
