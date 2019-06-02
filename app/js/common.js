@@ -66,10 +66,12 @@ $(function() {
 		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
 	});
 
-	var lazyLoadInstance = new LazyLoad({
+	let lazyLoadInstance = new LazyLoad({
 		elements_selector: ".lazy"
 		// ... more custom settings?
 	});
+
+	$(".history").animated("fadeInDown");
 
 
 });

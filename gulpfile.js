@@ -6,7 +6,7 @@ var gulp          = require('gulp'),
 		sass          = require('gulp-sass'),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
+		uglify        = require('gulp-uglify-es').default,
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
@@ -48,10 +48,12 @@ gulp.task('scripts', function() {
 		'app/libs/equalHeights/equalheights.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/libs/lazyload/lazyload.min.js',
+		'app/libs/animate/animate-css.js',
+		'app/libs/waypoints/waypoints.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
+	.pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

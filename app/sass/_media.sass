@@ -9,6 +9,10 @@
 		.footer-nav
 			width: 100%
 
+	.history
+		&::before
+			left: 20.75%
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -25,6 +29,24 @@
 			left: 0px
 		.owl-next
 			right: 0px
+
+	.section-about
+		p
+			padding: 0
+			padding-top: 40px
+
+	.history
+		flex-wrap: wrap
+		padding: 0
+		&::before
+			left: 20%
+		&__date
+			flex-basis: 15%
+		&__icon
+			margin-right: 30px
+			margin-top: 20px
+		&__list
+			flex-basis: 70%
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -49,11 +71,37 @@
 			&:last-child
 				margin: 0 auto
 			
-
 	.news
 		display: block
 		&__img
 			margin-bottom: 30px
+
+	.section-about
+		p
+			margin-bottom: 35px
+
+	.history
+		display: block
+		padding: 0
+		margin-top: 50px
+		&::before
+			display: none
+		&__date
+			display: inline-block
+			margin: 0
+			margin-top: 15px
+		&__icon
+			margin: 0
+			float: right
+		&__list
+			margin-top: 30px
+			&::before
+				content: ''
+				position: absolute
+				top: -30px
+				left: 20px
+				border: 20px solid transparent
+				border-bottom: 20px solid #f7f7f7
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -149,6 +197,25 @@
 	.social
 		a
 			margin: 0 15px
+
+	.history
+		display: block
+		padding: 0
+		margin-top: 50px
+		&__date
+			font-size: 20px
+			margin-left: 20px
+		&__icon
+			width: 57px
+			height: 57px
+			margin-right: 20px
+			img
+				width: 45px
+				height: 45px
+		&__list
+			margin-top: 30px
+			li
+				font-size: 13px
 
 
 /*==========  Mobile First  ==========*/
