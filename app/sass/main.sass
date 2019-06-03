@@ -44,20 +44,28 @@ b, strong
 .h1
 	font-size: 36px
 	font-weight: normal
+	margin: 0
+	padding: 0
 
 .h2
 	font-size: 50px
 	font-weight: 300
 	line-height: 1.1
+	margin: 0
+	padding: 0
 
 .h3
 	font-size: 36px
 	font-weight: normal
+	margin: 0
+	padding: 0
 
 .h4
 	font-size: 16px
 	font-weight: bold
 	text-transform: uppercase
+	margin: 0
+	padding: 0
 
 .button
 	padding: 15px 0
@@ -779,7 +787,7 @@ footer
 		text-transform: uppercase
 		text-align: center
 		width: 100%
-	p
+	.about-descr
 		padding: 40px 90px 0 90px
 		margin: 0
 		margin-bottom: 65px
@@ -851,5 +859,106 @@ footer
 .teammate
 	display: flex
 	margin-top: 60px
+	margin-bottom: 30px
+	border-top: 1px solid #f2f2f2
+	padding-top: 30px
+	&__img
+		margin-right: 50px
+		img
+			width: 164px
+			border-radius: 50%
+			display: block
+			height: 164px
+	&__name
+		text-transform: none
+		font-size: 24px
+		font-weight: normal
+		line-height: 24px
+		margin-bottom: 20px
+		span
+			font-weight: bold
+			text-transform: uppercase
+	&__position
+		color: $accent
+		font-size: 16px
+		margin-bottom: 15px
+		line-height: 16px
+	&__descr
+		line-height: 21px
+		padding-right: 20px
+
+// Partners
+
+.section-about
+	.row
+		position: relative
+	.h5
+		margin: 0 auto
+		font-size: 12px
+		background-color: #303030
+		color: #fff
+		padding: 13px 0
+		width: 300px
+		display: inline-block
+		text-align: center
+		text-transform: uppercase
+		&::before
+			content: ''
+			position: absolute
+			width: 38%
+			height: 1px
+			background-color: #303030
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+		&:after
+			content: ''
+			position: absolute
+			width: 38%
+			height: 1px
+			background-color: #303030
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+
+.partner
+	padding: 30px 0
+	border-bottom: 1px solid #f2f2f2
+	margin-top: 45px
+	&__img
+		width: 150px
+		height: 80px
+		background-color: #f6f6f6
+		border-left: 1px solid $accent
+		position: relative
+		display: inline-block
+		img
+			position: absolute
+			width: 102px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	&__title
+		font-size: 22px
+		font-weight: 600
+		margin-left: 20px
+		line-height: 22px
+		display: inline-block
+		letter-spacing: -0.7px
+		width: 50%
+	&__descr
+		font-weight: 300
+		padding: 0
+		margin: 40px 0 20px 0
+	&__site
+		margin-bottom: 45px
+		display: inline-block
+		font-size: 16px
+		color: $text
+		text-decoration: none
+		font-weight: bold
+		transition: color .15s ease
+		&:hover
+			color: $accent
 
 @import "media" // Always at the end

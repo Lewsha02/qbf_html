@@ -23,6 +23,19 @@ $(function() {
 	$(".main-slider-content").equalHeights();
 	$(".advantage").equalHeights();
 
+	$(window).resize(function() {
+		if ($(window).width() >= '992') {
+			$(".partner").equalHeights();
+		} else {
+			$(".partner").css("max-height", "100%");
+		}
+	});
+
+	if ($(window).width() >= '992') {
+		$(".partner").equalHeights();
+	}
+	
+
 	let analiticBtn = $("a[href='#analitics']"),
 			newsBtn = $("a[href='#news']"),
 			analiticWrap = $(".analitics-wrapper"),
@@ -72,6 +85,8 @@ $(function() {
 	});
 
 	$(".history").animated("fadeInDown");
+	$(".teammate").animated("fadeInDown");
+	$(".partner").animated("fadeInDown");
 
 
 });

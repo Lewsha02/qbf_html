@@ -13,6 +13,12 @@
 		&::before
 			left: 20.75%
 
+	.teammate
+		&__img
+			margin-right: 15px
+		&__descr
+			padding-right: 0
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -31,7 +37,7 @@
 			right: 0px
 
 	.section-about
-		p
+		.about-descr
 			padding: 0
 			padding-top: 40px
 
@@ -77,7 +83,7 @@
 			margin-bottom: 30px
 
 	.section-about
-		p
+		.about-descr
 			margin-bottom: 35px
 
 	.history
@@ -102,6 +108,13 @@
 				left: 20px
 				border: 20px solid transparent
 				border-bottom: 20px solid #f7f7f7
+	
+	.section-about
+		.h5
+			&::before
+				width: 35%
+			&:after
+				width: 35%
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -216,6 +229,43 @@
 			margin-top: 30px
 			li
 				font-size: 13px
+
+	.teammate
+		display: block
+		text-align: center
+		&__img
+			img
+				width: 100px
+				height: 100px
+				margin: 0 auto 15px auto
+		&__name
+			font-size: 18px
+		&__position
+			font-size: 14px
+		&__descr
+			font-size: 13px
+
+	.section-about
+		.h5
+			&::before
+				display: none
+			&:after
+				display: none
+
+	.partner
+		&__img
+			width: 120px
+			height: 50px
+			img
+				width: 70%
+		&__title
+			font-size: 18px
+		&__descr
+			font-size: 14px
+			margin-bottom: 0
+		&__site
+			margin-top: 20px
+			font-size: 13px
 
 
 /*==========  Mobile First  ==========*/
