@@ -961,4 +961,137 @@ footer
 		&:hover
 			color: $accent
 
+// Serivces slider
+
+.services-slider
+	padding: 110px 0
+	&__img
+		max-width: 185px
+		max-height: 185px
+		display: flex
+		img
+			width: 185px
+	&__title
+		font-size: 40px
+		margin-bottom: 40px
+	&__descr
+		padding: 20px 0
+		font-size: 16px
+		border-top: 1px solid #767980
+		border-bottom: 1px solid #767980
+	.button
+		padding: 13px 0
+		margin-top: 60px
+		display: block
+
+// Service Item
+
+.service-item
+	margin-top: 50px
+	border: 1px solid #e3e3e3
+	padding: 50px 30px
+	&__img
+		display: inline-block
+		vertical-align: top
+	&__text
+		display: inline-block
+	&__title
+		display: block
+		color: $text
+		text-decoration: none
+		font-size: 24px
+		margin-bottom: 10px
+		line-height: 0.9
+		transition: color .15s ease
+		&:hover
+			color: $accent
+			text-decoration: none
+	&__subtitle
+		color: $accent
+		margin-bottom: 20px
+		transition: color .15s ease
+		&:hover
+			color: #9d9d9d
+	&__characteristics
+		display: inline-block
+		text-align: center
+		padding: 0 29px
+		margin-top: 15px
+		&.left
+			padding-left: 0px
+			border-right: 1px solid #ddd
+		&-value
+			font-size: 30px
+			margin-bottom: 5px
+		&-name
+			font-size: 13px
+			display: flex
+			flex-wrap: wrap
+			color: #666666
+	&__descr
+		color: $text
+		text-decoration: none
+		transition: color .15s ease
+		display: block
+		margin-left: 30px
+		margin-bottom: 40px
+		&:hover
+			color: #9d9d9d
+			text-decoration: none
+	&__button
+		margin-left: 30px
+		padding: 13px
+		width: 363px
+		display: inline-block
+		text-align: center
+		letter-spacing: 1px
+
+// Fonds Generals
+
+.fonds-generals
+	text-align: center
+	border: 1px solid #ebebeb
+	padding: 55px 37px 30px
+	margin-top: 50px
+	&__img
+		margin-bottom: 55px
+	&__title
+		font-size: 24px
+		text-decoration: none
+		color: $text
+		transition: color .15s ease
+		display: block
+		margin-bottom: 5px
+		&:hover
+			color: $accent
+			text-decoration: none
+	&__subtitle
+		color: $accent
+		margin-bottom: 30px
+	&__list
+		margin: 0
+		padding: 0
+		text-align: left
+		list-style-type: none
+		li
+			margin-bottom: 10px
+			padding-left: 20px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				width: 5px
+				height: 5px
+				background-color: $accent
+				border-radius: 50%
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+	&__button
+		display: block
+		margin-top: 50px
+		width: 100%
+		letter-spacing: 1px
+		padding: 13px
+
 @import "media" // Always at the end

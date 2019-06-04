@@ -19,6 +19,13 @@
 		&__descr
 			padding-right: 0
 
+	.service-item
+		&__descr
+			margin-top: 25px
+		&__button
+			margin: 0 auto
+			display: block
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -115,6 +122,12 @@
 				width: 35%
 			&:after
 				width: 35%
+
+	.service-item
+		&__img
+			margin-bottom: 15px
+		&__descr
+			margin-left: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -266,6 +279,66 @@
 		&__site
 			margin-top: 20px
 			font-size: 13px
+
+	.services-slider
+		&__img
+			width: 125px
+			height: 125px
+			img
+				width: 125px
+		&__title
+			font-size: 28px
+			margin-bottom: 20px
+		&__descr
+			font-size: 14px
+		.button
+			margin-top: 40px
+
+	.service-item
+		border: none
+		padding: 0
+		&__img
+			width: 130px
+			img
+				width: 130px
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: 14px
+		&__button
+			width: 270px
+		&__characteristics
+			display: block
+			text-align: center
+			padding: 0
+			&-value
+				font-size: 24px
+			&-name
+				text-align: center
+				display: block
+				font-size: 12px
+			&.left
+				border: none
+		&__descr
+			font-size: 14px
+
+	.fonds-generals
+		padding: 15px 5px 5px
+		&__img
+			margin-bottom: 30px
+			img
+				height: 175px
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: 14px
+		&__list
+			li
+				font-size: 13px
+		&__button
+			font-size: 14px
+			max-width: 90%
+			margin: 15px auto 0 auto
 
 
 /*==========  Mobile First  ==========*/
