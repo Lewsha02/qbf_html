@@ -769,8 +769,6 @@ footer
 			color: $text
 			text-decoration: underline
 
-
-
 // About Company
 
 .section-about
@@ -1093,5 +1091,170 @@ footer
 		width: 100%
 		letter-spacing: 1px
 		padding: 13px
+
+// Single service main section
+
+.single-main
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	&__title
+		color: #fff
+		margin-bottom: 20px
+		text-align: center
+		margin-left: -90px
+	&__subtitle
+		text-align: center
+		margin-left: -90px
+		color: #fff
+	&__descr
+		margin: 0
+		margin-top: 70px
+		padding: 24px 0
+		border-top: 1px solid #888e99
+		border-bottom: 1px solid #888e99
+		text-align: center
+		line-height: 1.6
+		color: #fff
+
+// About Service
+
+.about-service
+	padding-left: 80px
+	padding-right: 80px
+
+.service-characteristics
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 50px
+
+.characteristics-item
+	padding: 10px 0
+	border-right: 1px solid #f6f6f6
+	width: 33%
+	&:last-child
+		border: none
+	&__name
+		font-size: 14px
+		color: $accent
+		margin-bottom: 15px
+	&__value
+		font-size: 36px
+		font-weight: 300
+
+.service-purpose
+	&__title
+		font-size: 18px
+		color: $accent
+		font-weight: normal
+	&__descr
+		line-height: 1.2
+		margin-top: 20px
+	&__button
+		margin-top: 50px
+		display: inline-block
+		width: 350px
+		text-align: center
+
+.ic-item
+	background-color: #f6f6f6
+	padding: 30px 40px
+	&__img
+		text-align: center
+		margin-bottom: 20px
+	&__title
+		font-size: 18px
+		color: $text
+		font-weight: bold
+		margin: 0
+		padding: 0
+	&__descr
+		margin-top: 20px
+		line-height: 1.2
+		margin-bottom: 30px
+	&__link
+		margin: 0
+		padding: 0
+		display: inline-block
+		color: $accent
+		text-decoration: none
+		transition: color .15s ease
+		&:hover
+			text-decoration: none
+			color: #333
+
+// Investment relevance
+
+.invest-relevance
+	margin-top: 80px
+	&__title
+		font-size: 36px
+		font-weight: 300
+		margin-left: -20px
+		text-transform: none
+		margin-bottom: 20px
+		padding-bottom: 15px
+		position: relative
+		&::before
+			content: ''
+			height: 5px
+			width: 66px
+			position: absolute
+			left: 0
+			bottom: 0
+			background-color: $accent
+	&__descr
+		font-weight: bold
+		margin-left: -20px
+		font-size: 16px
+
+.relevance-item
+	margin-top: 50px
+	&__img
+		margin-bottom: 30px
+	&__title
+		text-transform: none
+		margin-bottom: 20px
+	&__descr
+		font-size: 15px
+		line-height: 1.2
+
+.consultation
+	margin-top: 85px
+	background-color: #f7f7f7
+	border: 1px solid #e9e9e9
+	padding: 60px 0
+	text-align: center
+	position: relative
+	margin-bottom: 20px
+	&__icon
+		position: absolute
+		width: 55px
+		height: 55px
+		color: #fff
+		background-color: #474649
+		border-radius: 50%
+		left: 50%
+		top: -27.5px
+		transform: translateX(-50%)
+		i
+			font-size: 25px
+			line-height: 55px
+	&__title
+		font-size: 14px
+		text-transform: uppercase
+		font-weight: 300
+		margin-bottom: 50px
+	&__button
+		display: inline-block
+		width: 480px
+		text-align: center
+		&:last-child
+			background-color: #afafaf
+			margin-left: -5px
+			&:hover
+				color: $accent
+				background-color: #e6e6e6
 
 @import "media" // Always at the end

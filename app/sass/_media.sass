@@ -26,6 +26,24 @@
 			margin: 0 auto
 			display: block
 
+	.about-service
+		padding-left: 0
+		padding-right: 0
+	
+	.characteristics-item
+		&__value
+			font-size: 35px
+
+	.invest-relevance
+		&__title
+			margin-left: 0px
+		&__descr
+			margin-left: 0px
+
+	.consultation
+		&__button
+			width: 400px
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -60,6 +78,26 @@
 			margin-top: 20px
 		&__list
 			flex-basis: 70%
+
+	.single-main
+		&__title
+			margin-left: -50px
+		&__subtitle
+			margin-left: -50px
+
+	.ic-item
+		margin-top: 30px
+
+	.section-about
+		.h5
+			&::before
+				width: 30%
+			&:after
+				width: 30%
+
+	.consultation
+		&__button
+			width: 300px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -119,15 +157,35 @@
 	.section-about
 		.h5
 			&::before
-				width: 35%
+				width: 29%
 			&:after
-				width: 35%
+				width: 29%
 
 	.service-item
 		&__img
 			margin-bottom: 15px
 		&__descr
 			margin-left: 0
+
+	.single-main
+		&__img
+			text-align: center
+		&__title
+			margin-left: 0
+			margin-top: 20px
+		&__subtitle
+			margin-left: 0
+
+	.characteristics-item
+		&__value
+			font-size: 30px
+
+	.consultation
+		&__button
+			width: 300px
+			&:last-child
+				margin-left: 0
+				margin-top: 10px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -339,6 +397,54 @@
 			font-size: 14px
 			max-width: 90%
 			margin: 15px auto 0 auto
+
+	.single-main
+		&__title
+			font-size: 36px
+		&__subtitle
+			font-size: 14px
+		&__descr
+			font-size: 14px
+
+	.characteristics-item
+		width: 100%
+		text-align: center
+		margin-top: 15px
+		border-bottom: 1px solid #f6f6f6
+		border-right: none
+		&:last-child
+			border: none
+		&__value
+			font-size: 30px
+
+	.service-purpose
+		&__button
+			max-width: 280px
+
+	.invest-relevance
+		&__img
+			img
+				width: 120px
+		&__title
+			font-size: 28px
+			line-height: 1.4
+			margin-top: 20px
+		&__descr
+			font-size: 14px
+
+	.consultation
+		&__icon
+			width: 50px
+			height: 50px
+			i
+				font-size: 20px
+				line-height: 50px
+		&__title
+			font-size: 13px
+		&__button
+			width: 260px
+			padding: 11px 0
+			font-size: 15px
 
 
 /*==========  Mobile First  ==========*/
