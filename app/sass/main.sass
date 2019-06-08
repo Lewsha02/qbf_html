@@ -700,6 +700,7 @@ footer
 	color: #ffffff
 	.h3
 		margin: 0 auto
+		display: block
 	.button
 		margin: 0 auto
 		width: 400px
@@ -1256,5 +1257,388 @@ footer
 			&:hover
 				color: $accent
 				background-color: #e6e6e6
+
+// Property Main Section
+
+.property-main
+	padding: 120px 0
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	text-align: center
+	&__title
+		color: #fff
+		font-weight: 300
+	&__descr
+		border-top: 1px solid #4b4d50
+		border-bottom: 1px solid #4b4d50
+		margin-top: 60px
+		padding: 25px 0
+		color: #ffffff
+
+// Property types
+
+.property-types
+	display: flex
+	justify-content: space-between
+	border: 1px solid #e3e3e3
+	margin-top: 80px
+
+.property-item
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 25%
+	padding: 15px 0
+	border-left: 1px solid #e3e3e3
+	text-decoration: none
+	&:first-child
+		border-left: none
+	&__img
+		margin-right: 20px
+		img
+			height: 53px
+		&_hover
+			display: none
+	&__name
+		color: $text
+
+.property-item
+	&:hover
+		text-decoration: none
+		background-color: $accent
+		.property-item__img
+			.property-item__img_hover
+				display: block
+			.property-item__img_static
+				display: none
+		.property-item__name
+			color: #fff
+
+.property-item
+	&.active-item
+		text-decoration: none
+		background-color: $accent
+		.property-item__img
+			.property-item__img_hover
+				display: block
+			.property-item__img_static
+				display: none
+		.property-item__name
+			color: #fff
+
+// About Propery / Property stage
+
+.property-stage
+	margin-top: 50px
+	&__number
+		background-color: #333
+		width: 55px
+		height: 55px
+		line-height: 55px
+		text-align: center
+		color: #fff
+		font-size: 23px
+		margin-bottom: 30px
+	&__descr
+		line-height: 1.2
+
+// Alternative
+
+.section-alternative
+	background-color: #333
+	text-align: center
+
+.alternative
+	&__title
+	color: #fff
+	&__subtitle
+		color: $accent
+		font-size: 12px
+		margin-top: 10px
+		text-transform: uppercase
+	&__img
+		margin-top: 75px
+		img
+			max-width: 100%
+
+// Property advantage
+
+.section-advantages-property
+	background-color: #ffffff
+	.h3
+		font-weight: normal
+		margin-bottom: 80px
+	p
+		font-weight: normal
+		line-height: 16px
+
+.advantage-property
+	align-items: flex-start
+	&__text
+		.h4
+			font-size: 21px
+			font-weight: bold
+			margin-bottom: 20px
+			text-transform: none
+
+// Section more (start today)
+
+.start-subtitle
+	color: $accent
+	font-size: 12px
+	text-transform: uppercase
+	display: block
+	width: 100%
+	text-align: center
+
+
+.section-start-today
+	position: relative
+	.more-callback
+		margin-right: 5px
+		padding: 13px 0
+	.more-grey
+		margin-left: 5px
+		padding: 13px 0
+		background-color: #a3a3a3
+		&:hover
+			color: $accent
+			background: #e6e6e6
+
+.property-finish
+	padding-top: 120px
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 1px
+		background-color: #545353
+		bottom: 32%
+		left: 0
+		z-index: 0
+	&__text
+		text-align: center
+		margin-top: 60px
+	&__img
+		text-align: center
+		width: 140px
+		height: 38px
+		position: absolute
+		top: -50px
+		background-color: #333
+		z-index: 99
+		left: 50%
+		transform: translateX(-50%)
+		img
+			width: 40px
+
+.finish-menu
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	&__item
+		text-decoration: none
+		margin-top: 50px
+		width: 24%
+		display: inline-block
+		line-height: 49px
+		color: #fff
+		border: 1px solid #8f8f8f
+		text-align: center
+		&:hover
+			border-color: $accent
+			text-decoration: none
+			color: $accent
+		&.active-item
+			border-color: $accent
+			color: $accent
+
+// Section Seo
+
+.seo
+	&__descr
+		margin-bottom: 10px
+		font-size: 14px
+		line-height: normal
+	&__title
+		font-size: 16px
+		margin-bottom: 15px
+		text-transform: none
+
+// Review Section
+
+.section-review
+	.about-descr
+		margin-bottom: 0
+
+.review-item
+	margin-top: 80px
+	&__img
+		img
+			width: 100%
+			max-width: 580px
+	&__title
+		display: block
+		padding-top: 22px
+		margin-bottom: 20px
+		color: $text
+		font-size: 14px
+		text-decoration: none
+		border-top: 1px solid #f2f2f2
+		text-transform: uppercase
+		font-weight: bold
+		transition: color .15s ease
+		&:hover
+			text-decoration: none
+			color: $accent
+	&__date
+		display: inline
+		font-size: 14px
+		font-weight: 300
+	&__separator
+		font-size: 14px
+		color: $accent
+	&__archive
+		color: $text
+		text-decoration: none
+		font-size: 14px
+		transition: color .15s ease
+		&:hover
+			color: $accent
+			text-decoration: none
+	&__descr
+		margin-top: 20px
+		color: $text
+		text-decoration: none
+		display: block
+		line-height: 1.4
+		transition: color .15s ease
+		&:hover
+			color: #7f7f7f
+			text-decoration: none
+
+.pagination
+	text-transform: uppercase
+	text-align: center
+	ul
+		list-style-type: none
+		margin-top: 90px
+		li
+			display: inline-block
+			a
+				font-size: 21px
+				color: $text
+				text-decoration: none
+				padding: 0 10px
+				transition: color .15s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+			&.pagination_current
+				a
+					color: $accent
+
+// Review single page
+
+.review-content
+	margin-top: 80px
+	padding-bottom: 50px
+	p
+		margin-bottom: 24px
+		line-height: 24px
+	strong
+		font-size: 15px
+		margin: 23px 0 10px
+	.source
+		font-size: 15px
+		color: #939393
+		margin-bottom: 50px
+		font-style: italic
+	img
+		width: 100%
+		text-align: center
+		display: block
+		margin-bottom: 50px
+	.author
+		font-size: 15px
+		font-weight: bold
+
+.single-analitics-finish
+	margin-top: 60px
+	text-align: center
+	img
+		display: block
+		margin: 0 auto
+		margin-bottom: 30px
+	a
+		font-size: 12px
+		color: $text
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .15s ease
+		&:nth-child(2)
+			margin-right: 26px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				background-color: $accent
+				right: -17px
+				top: 50%
+				transform: translateY(-50%)
+				border-radius: 50%
+		&:hover
+			text-decoration: none
+			color: $accent
+
+// Section Markets
+
+.market-item
+	margin-top: 80px
+	border-bottom: 1px solid #ededed
+	padding-bottom: 30px
+	&__img
+		text-align: center
+		img
+			width: 100%
+			max-width: 386px
+	&__title
+		margin-top: 30px
+		margin-bottom: 20px
+		color: $text
+		font-size: 15px
+		text-transform: uppercase
+		font-weight: bold
+		display: block
+		transition: color .15s ease
+		&:hover
+			text-decoration: none
+			color: $accent
+	&__date
+		display: inline
+		font-size: 14px
+	&__separator
+		color: $accent
+	&__archive
+		font-size: 14px
+		color: $text
+		text-decoration: none
+		transition: color .15s ease
+		display: inline-block
+		&:hover
+			text-decoration: none
+			color: $accent
+	&__descr
+		display: block
+		margin-top: 20px
+		color: $text
+		text-decoration: none
+		transition: color .15s ease
+		&:hover
+			text-decoration: none
+			color: #7f7f7f
 
 @import "media" // Always at the end

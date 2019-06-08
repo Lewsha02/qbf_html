@@ -44,6 +44,15 @@
 		&__button
 			width: 400px
 
+	.property-finish
+		&::before
+			bottom: 32%
+		&__img
+			top: -60px
+
+	.review-item
+		align-items: center
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -98,6 +107,42 @@
 	.consultation
 		&__button
 			width: 300px
+
+	.property-types
+		flex-wrap: wrap
+	.property-item
+		flex-basis: 50%
+		&:nth-child(3)
+			border-left: none
+		&:nth-child(4)
+			border-top: 1px solid #e3e3e3
+
+	.alternative
+		&__title
+			font-size: 32px
+
+	.section-start-today
+		.more-callback
+			margin: 15px auto
+		.more-grey
+			margin: 0 auto
+
+	.property-finish
+		&::before
+			bottom: 30%
+		&__img
+			top: -65px
+
+	.finish-menu
+		&__item
+			width: 48%
+			&:nth-child(3), &:nth-child(4)
+				margin-top: 25px
+
+	.review-item
+		&__title
+			margin-top: 10px
+			padding-top: 10px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -186,6 +231,22 @@
 			&:last-child
 				margin-left: 0
 				margin-top: 10px
+
+	.alternative
+		&__title
+			line-height: 1.2
+
+	.property-finish
+		&::before
+			bottom: 29%
+		&__img
+			top: -65px
+
+	.finish-menu
+		&__item
+			width: 48%
+			&:nth-child(3), &:nth-child(4)
+				margin-top: 25px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -446,6 +507,53 @@
 			padding: 11px 0
 			font-size: 15px
 
+	.property-main
+		&__title
+			font-size: 36px
+
+	.property-item
+		flex-basis: 100%
+		&:nth-child(3)
+			border-left: none
+			border-top: 1px solid #e3e3e3
+		&:nth-child(4)
+			border-top: 1px solid #e3e3e3
+
+	.alternative
+		&__title
+			font-size: 26px
+
+	.property-finish
+		&::before
+			bottom: 37%
+		&__img
+			top: -45px
+
+	.finish-menu
+		&__item
+			width: 100%
+			&:nth-child(2), &:nth-child(3), &:nth-child(4)
+				margin-top: 25px
+
+	.review-item
+		&__title, &__date, &__separator, &__archive
+			font-size: 13px
+		&__descr
+			font-size: 14px
+
+	.section-review
+		.h3
+			font-size: 28px
+
+	.review-content
+		p
+			font-size: 14px
+		strong
+			font-size: 13px
+		.source
+			font-size: 13px	
+		.author
+			font-size: 13px
 
 /*==========  Mobile First  ==========*/
 

@@ -23,6 +23,7 @@ $(function() {
 	$(".main-slider-content").equalHeights();
 	$(".advantage").equalHeights();
 	$(".fonds-generals__list").equalHeights();
+	$(".market-item").equalHeights();
 
 	$(window).resize(function() {
 		if ($(window).width() >= '992') {
