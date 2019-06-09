@@ -144,6 +144,16 @@
 			margin-top: 10px
 			padding-top: 10px
 
+	.strategy-item
+		&__date, &__pdf, &__more
+			width: 14%
+		&__img
+			width: 10%
+		&__name
+			width: 44%
+			padding-left: 0
+			justify-content: center
+		
 // ≥768px
 +media-breakpoint-down(sm)
 	.main-slider-content
@@ -202,9 +212,9 @@
 	.section-about
 		.h5
 			&::before
-				width: 29%
+				width: 28%
 			&:after
-				width: 29%
+				width: 28%
 
 	.service-item
 		&__img
@@ -247,6 +257,21 @@
 			width: 48%
 			&:nth-child(3), &:nth-child(4)
 				margin-top: 25px
+
+	.strategy-item
+		flex-wrap: wrap
+		&__date
+			width: 84.5%
+		&__img
+			width: 14%
+		&__name
+			width: 49%
+			padding: 20px 0
+			margin-top: 10px
+		&__more, &__pdf
+			width: 24%
+			padding: 20px 0
+			margin-top: 10px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -378,6 +403,8 @@
 			font-size: 13px
 
 	.section-about
+		.h3
+			font-size: 28px
 		.h5
 			&::before
 				display: none
@@ -554,6 +581,32 @@
 			font-size: 13px	
 		.author
 			font-size: 13px
+
+	.market-content
+		font-size: 14px
+
+	.strategy-item
+		flex-wrap: wrap
+		&__date
+			width: 74%
+		&__img
+			width: 24%
+		&__name
+			width: 100%
+			padding: 20px 0
+			margin-top: 10px
+		&__more, &__pdf
+			width: 49%
+			padding: 20px 0
+			margin-top: 10px
+	
+	.archive-item
+		&__img
+			img
+				height: 50px
+		&__name
+			height: 50px
+			padding-left: 40px
 
 /*==========  Mobile First  ==========*/
 
