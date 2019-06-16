@@ -15,6 +15,15 @@ $(function() {
 		nav: true,	
 		navText: ["<i class='icon-angle-left'></i>","<i class='icon-angle-right'></i>"],
 		loop: true,
+		smartSpeed: 800,
+		autoplay: true,
+		autoplayTimeout: 7000
+	});
+
+	$(".press-slider").owlCarousel({
+		items: 1,
+		nav: false,
+		loop: true,
 		smartSpeed: 1500,
 		autoplay: true,
 		autoplayTimeout: 7500
@@ -24,6 +33,7 @@ $(function() {
 	$(".advantage").equalHeights();
 	$(".fonds-generals__list").equalHeights();
 	$(".market-item").equalHeights();
+	$(".press-news-item__title").equalHeights();
 
 	$(window).resize(function() {
 		if ($(window).width() >= '992') {
