@@ -1957,5 +1957,50 @@ footer
 				margin-right: 10px
 				background-color: $accent
 
+// License Item
+
+.license-item
+	&__descr
+		margin-bottom: 20px
+		min-height: 78px
+	&__pdf-link
+		color: $text
+		text-decoration: none
+		padding-bottom: 5px
+		border-bottom: 1px solid #f2f2f2
+		transition: color .15s ease
+		font-size: 15px
+		font-weight: bold
+		&:hover
+			text-decoration: none
+			color: #7f7f7f
+
+// Privacy politics
+
+.privacy-content
+	.h2
+		display: block
+		width: 100%
+		text-align: center
+		color: $accent
+		font-size: 24px
+		padding-top: 35px
+		padding-bottom: 30px
+		font-weight: normal
+		&:first-child
+			padding-top: 20px
+	.h6
+		font-size: 14px
+		font-weight: bold
+		margin-bottom: 24px
+		text-align-last: left
+		padding-top: 25px
+		text-transform: uppercase
+	p
+		line-height: 24px
+		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
+			
 
 @import "media" // Always at the end
