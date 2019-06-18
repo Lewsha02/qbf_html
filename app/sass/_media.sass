@@ -53,6 +53,15 @@
 	.review-item
 		align-items: center
 
+	.contacts-form
+		&__button
+			float: none
+			margin-top: 10px
+
+	.contact-office
+		&__descr
+			width: 450px
+
 // ≥992px
 +media-breakpoint-down(md)
 	.header-logo
@@ -161,6 +170,23 @@
 		border-right: none
 		&:last-child
 			margin-bottom: 0
+
+	.main-office-info
+		padding: 0 20px
+		text-align: center
+		&__title
+			font-size: 24px
+		p
+			font-size: 16px
+		a
+			font-size: 16px
+
+	.contacts-form
+		padding: 0 10px
+
+	.contact-office
+		&__descr
+			width: 500px
 		
 // ≥768px
 +media-breakpoint-down(sm)
@@ -280,6 +306,14 @@
 			width: 24%
 			padding: 20px 0
 			margin-top: 10px
+
+	.main-office-info
+		&__title
+			font-size: 24px
+			margin-bottom: 10px
+
+	.contacts-form
+		margin-top: 40px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -646,6 +680,50 @@
 			font-size: 12px
 		p
 			font-size: 13px
+
+	.main-office-info
+		padding: 0
+		&__title
+			font-size: 20px
+		p
+			font-size: 14px
+		a
+			font-size: 14px
+
+	.contacts-form
+		padding: 0
+		&__title
+			font-size: 20px
+		input, textarea
+			padding: 6px 18px
+			margin-bottom: 10px
+			font-size: 13px
+		textarea
+			padding: 16px 18px
+		&__privacy
+			width: 250px
+			padding: 0 10px
+		&__button
+			width: 206px
+			float: none
+
+	.contact-office
+		&__img
+			width: 290px
+			margin: 0 auto
+			margin-top: 30px
+		&__descr
+			width: 290px
+			.h6
+				font-size: 14px
+			a
+				font-size: 14px
+
+	.controls-text
+		&__title
+			font-size: 14px
+		&__descr
+			font-size: 14px
 
 /*==========  Mobile First  ==========*/
 
